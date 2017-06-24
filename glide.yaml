@@ -1,0 +1,5 @@
+package: contentproxy
+import:
+- package: github.com/labstack/echo
+  version: ~3.0
+- package: github.com/facebookgo/grace

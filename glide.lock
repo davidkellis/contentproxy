@@ -1,0 +1,32 @@
+hash: 5a3fba4da6773d9d5b6fcaddc849eb57405d16cd62f2fc65bdbfc47b9659f902
+updated: 2017-06-24T14:44:16.849428938-05:00
+imports:
+- name: github.com/facebookgo/grace
+  version: 4afe952a37a495ae4ac0c1d4ce5f66e91058d149
+- name: github.com/labstack/echo
+  version: 8d504c1b699c757b267255c53b3e5219f9974abc
+- name: github.com/labstack/gommon
+  version: 1121fd3e243c202482226a7afe4dcd07ffc4139a
+  subpackages:
+  - color
+  - log
+- name: github.com/mattn/go-colorable
+  version: ded68f7a9561c023e790de24279db7ebf473ea80
+- name: github.com/mattn/go-isatty
+  version: fc9e8d8ef48496124e79ae0df75490096eccf6fe
+- name: github.com/tylerb/graceful
+  version: d72b0151351a13d0421b763b88f791469c4f5dc7
+- name: github.com/valyala/bytebufferpool
+  version: e746df99fe4a3986f4d4f79e13c1e0117ce9c2f7
+- name: github.com/valyala/fasttemplate
+  version: dcecefd839c4193db0d35b88ec65b4c12d360ab0
+- name: golang.org/x/crypto
+  version: ab89591268e0c8b748cbe4047b00197516011af5
+  subpackages:
+  - acme
+  - acme/autocert
+- name: golang.org/x/sys
+  version: f845067cf72a21fb4929b0e6a35273bd83b56396
+  subpackages:
+  - unix
+testImports: []
