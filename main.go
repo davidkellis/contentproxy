@@ -54,7 +54,7 @@ func main() {
 	//   url (required) - the URL of the target resource
 	//   user (optional) - basic auth username to authenticate against <url>
 	//   pass (optional) - basic auth password to authenticate against <url>
-	server.GET("/raw/:key", func(c echo.Context) error {
+	server.GET("/:key/raw", func(c echo.Context) error {
 		key := c.Param("key")
 		url := c.QueryParam("url")
 		username := c.QueryParam("user")
@@ -91,5 +91,21 @@ func main() {
 		return c.Blob(res.StatusCode, contentType, bodyByteSlice)
 	})
 
+	server.GET("/:key/frontdoor", func(c echo.Context) error {
+		return c.String(http.StatusOK, "render frontdoor")
+	})
+
+	server.GET("/:key/garage", func(c echo.Context) error {
+		return c.String(http.StatusOK, "render backdoor")
+	})
+
+	server.GET("/:key/backdoor", func(c echo.Context) error {
+		return c.String(http.StatusOK, "render backdoor")
+	})
+
 	server.Logger.Fatal(server.Start(":4444"))
+}
+
+func get(url, username, password string) (*http.Response, error) {
+	return nil, nil
 }
