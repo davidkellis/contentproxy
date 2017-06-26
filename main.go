@@ -16,6 +16,7 @@ import (
 
 // var driver *agouti.WebDriver = nil
 var configFile = flag.String("config", "config.toml", "TOML formatted config file path")
+var port = flag.Int("port", 80, "Web server port")
 var server *echo.Echo = nil
 
 func handleCtrlC(c chan os.Signal) {
@@ -152,5 +153,6 @@ func main() {
 		return c.Blob(res.StatusCode, contentType, bodyByteSlice)
 	})
 
-	server.Logger.Fatal(server.Start(":4444"))
+	address := fmt.Sprintf(":%v", *port)
+	server.Logger.Fatal(server.Start(address))
 }
