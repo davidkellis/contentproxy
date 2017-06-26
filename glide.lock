@@ -1,6 +1,8 @@
-hash: 5a3fba4da6773d9d5b6fcaddc849eb57405d16cd62f2fc65bdbfc47b9659f902
-updated: 2017-06-24T14:44:16.849428938-05:00
+hash: 678c69730b4fc850e2157a1f5d95f9d8a8fe4da08833c5cc6600308f35680c62
+updated: 2017-06-25T15:09:27.86640298-05:00
 imports:
+- name: github.com/BurntSushi/toml
+  version: 8b58b6030fce084b58a61e2bc3fdf183d5881ab4
 - name: github.com/facebookgo/grace
   version: 4afe952a37a495ae4ac0c1d4ce5f66e91058d149
 - name: github.com/labstack/echo
